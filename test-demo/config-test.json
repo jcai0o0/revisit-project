@@ -1,0 +1,131 @@
+{
+    "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/StudyConfigSchema.json",
+    "studyMetadata": {
+        "title": "Test title",
+        "version": "v1.0",
+        "authors": [
+            "Pixel Master"
+        ],
+        "date": "2024-03-14",
+        "description": "A test test test",
+        "organizations": [
+            "Pixel Master",
+            "WPI"
+        ]
+    },
+    "uiConfig": {
+        "contactEmail": "test@test.com",
+        "helpTextPath": "test-demo/help.md",
+        "logoPath": "assets/revisitLogoSquare.svg",
+        "withProgressBar": true,
+        "autoDownloadStudy": true,
+        "sidebar": true
+    },
+    "components": {
+        "introduction": {
+            "type": "markdown",
+            "path": "test-demo/introduction.md",
+            "response": []
+        },
+        "consent": {
+            "type": "markdown",
+            "path": "test-demo/consent-cm.md",
+            "nextButtonText": "Agree",
+            "response": [
+                {
+                    "id": "signature",
+                    "prompt": "Your signature",
+                    "required": true,
+                    "location": "belowStimulus",
+                    "type": "shortText",
+                    "placeholder": "Please provide your signature"
+                },
+                {
+                    "id": "accept",
+                    "prompt": "Do you consent to the study and wish to continue?",
+                    "required": true,
+                    "requiredValue": "yes",
+                    "location": "belowStimulus",
+                    "type": "radio",
+                    "options": [
+                        {
+                            "label": "Decline",
+                            "value": "no"
+                        },
+                        {
+                            "label": "Accept",
+                            "value": "yes"
+                        }
+                    ]
+                }
+            ]
+        },
+        "post-study-survey": {
+            "type": "questionnaire",
+            "response": [
+                {
+                    "id": "q1",
+                    "prompt": "Which chart type you think is the most difficult",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "dropdown",
+                    "placeholder": "Enter your preference",
+                    "options": [
+                        {
+                            "label": "Bar",
+                            "value": "Bar"
+                        },
+                        {
+                            "label": "Stacked Bar",
+                            "value": "Stacked Bar"
+                        },
+                        {
+                            "label": "Bubble",
+                            "value": "Bubble"
+                        },
+                        {
+                            "label": "Pie",
+                            "value": "Pike"
+                        }
+                    ]
+                },
+                {
+                    "id": "q2",
+                    "prompt": "Your age",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "numerical",
+                    "placeholder": "Enter your age here, range from 0 - 100",
+                    "max": 100,
+                    "min": 0
+                },
+                {
+                    "id": "q3",
+                    "prompt": "From scale 1-5 how much do you like this study",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "likert",
+                    "preset": 5,
+                    "rightLabel": "Like",
+                    "leftLabel": "Dislike"
+                },
+                {
+                    "id": "q5",
+                    "prompt": "Any other comments?",
+                    "required": true,
+                    "location": "aboveStimulus",
+                    "type": "longText",
+                    "placeholder": "Enter your comments here"
+                }
+            ]
+        }
+    },
+    "sequence": {
+        "order": "fixed",
+        "components": [
+            "introduction",
+            "consent",
+            "post-study-survey"
+        ]
+    }
+}
