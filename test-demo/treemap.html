@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Treemap</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="../js/revisit-communicate.js"></script>
+</head>
+<body>
+    <svg></svg>
+    <script>
+        // Define a function treemap
+        function Treemap(data, selectedIndices) {
+            const width = 750;
+            const height = 400;
+            const padding = 50;
+
+            const svg = d3.select("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            const treemapLayout = d3.treemap()
+                .size([width - 2 * padding, height - 2 * padding])
+                .padding(1);
+
+            // hierarchical structure
+            const root = d3.hierarchy({ children: data })
+                .sum(d => d.value);
+
+            // Generate the treemap
+            treemapLayout(root);
+
+            // Add rectangles
+            svg.selectAll("rect")
+                .data(root.leaves())
+                .join("rect")
+                .attr("x", d => d.x0 + padding)
+                .attr("y", d => d.y0 + padding)
+                .attr("width", d => d.x1 - d.x0)
+                .attr("height", d => d.y1 - d.y0)
+                .style("fill", "none")
+                .style("stroke", "black");
+            
+            const selectedNodes = root.leaves().filter((_, i) => selectedIndices.includes(i));
+
+            // add dots for selected indices
+            svg.selectAll(".dot")
+                .data(selectedNodes)
+                .join("circle")
+                .attr("class", "dot")
+                .attr("cx", d => (d.x0 + d.x1 + 2 * padding) / 2)  // Center x-coordinate
+                .attr("cy", d => (d.y0 + d.y1 + 2 * padding) / 2)  // Center y-coordinate
+                .attr("r", 5)
+                .style("fill", "black");
+        }
+
+        // Get data from config file using revisit communicate
+        Revisit.onDataReceive((parameters) => {
+            console.log(parameters);
+            Treemap(parameters.data, parameters.selectedIndices);
+        });
+    </script>
+</body>
+</html>

@@ -130,6 +130,58 @@
                 ]
             }
         },
+        "treeMap": {
+            "type": "website",
+            "nextButtonLocation": "sidebar",
+            "instructionLocation": "sidebar",
+            "meta": {
+                "difficulty": 6
+            },
+            "description": "A chart with correct answer of 0.75",
+            "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+            "path": "test-demo/treemap.html",
+                "parameters": {
+                    "data": [
+                        {
+                            "name": "A",
+                            "value": 20
+                        },
+                        {
+                            "name": "B",
+                            "value": 30
+                        },
+                        {
+                            "name": "C",
+                            "value": 40
+                        },
+                        {
+                            "name": "D",
+                            "value": 10
+                        },
+                        {
+                            "name": "E",
+                            "value": 25
+                        },
+                        {
+                            "name": "F",
+                            "value": 35
+                        }
+                    ],
+                    "selectedIndices": [1, 2]
+                },
+            "response": [
+                {
+                    "id": "cm-response",
+                    "prompt": "Answer:",
+                    "required": true,
+                    "location": "sidebar",
+                    "type": "numerical",
+                    "placeholder": "0-100",
+                    "max": 100,
+                    "min": 0
+                }
+            ]
+        },
         "post-study-survey": {
             "type": "questionnaire",
             "response": [
@@ -196,6 +248,7 @@
             "introduction",
             "trainingBubbleChart1",
             "bubbleChart1",
+            "treeMap",
             "consent",
             "post-study-survey"
         ]
