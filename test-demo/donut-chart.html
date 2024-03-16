@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Donut Chart</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="../js/revisit-communicate.js"></script>
+</head>
+<body>
+    <svg></svg>
+    <script>
+        function Donut(data, selectedIndices) {
+            const width = 750;
+            const height = 400;
+            const radius = Math.min(width, height) / 2;
+            const innerRadius = radius * 0.6; 
+
+            const svg = d3.select("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+            const pie = d3.pie()
+                .value(d => d.value);
+
+            const arc = d3.arc()
+                .innerRadius(innerRadius) 
+                .outerRadius(radius);
+
+            const arcs = svg.selectAll(".arc")
+                .data(pie(data))
+                .enter()
+                .append("g")
+                .attr("class", "arc");
+
+            arcs.append("path")
+                .attr("d", arc)
+                .attr("fill", "none")
+                .attr("stroke", "black")
+                .attr("stroke-width", 2);
+
+            // Add dots for selected indices
+            arcs.filter((_, i) => selectedIndices.includes(i))
+                .append("circle")
+                .attr("class", "dot")
+                .attr("r", 5)
+                .style("fill", "black")
+                .attr("cx", d => arc.centroid(d)[0])
+                .attr("cy", d => arc.centroid(d)[1]);
+        }
+
+        // Get data from config file using revisit communicate
+        Revisit.onDataReceive((parameters) => {
+            Donut(parameters.data, parameters.selectedIndices);
+        });
+    </script>
+</body>
+</html>

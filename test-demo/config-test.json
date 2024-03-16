@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/StudyConfigSchema.json",
     "studyMetadata": {
-        "title": "Test title",
+        "title": "CS573 Data Visualization Experiment",
         "version": "v1.0",
         "authors": [
             "Pixel Master"
         ],
         "date": "2024-03-14",
-        "description": "A test test test",
+        "description": " ",
         "organizations": [
             "Pixel Master",
             "WPI"
@@ -173,6 +173,57 @@
                 }
             ]
         },
+        "donutChart": {     
+            "type": "website",
+            "nextButtonLocation": "sidebar",
+            "instructionLocation": "sidebar",
+            "meta": {
+                "difficulty": 5
+            },
+            "description": "Donut chart",
+            "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
+            "path": "test-demo/donut-chart.html",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "30"
+                    },
+                    {
+                        "name": "B",
+                        "value": "40"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "40"
+                    },
+                    {
+                        "name": "E",
+                        "value": "60"
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    4
+                ]
+            },
+            "response": [
+                {
+                    "id": "cm-response",
+                    "prompt": "Answer:",
+                    "required": true,
+                    "location": "sidebar",
+                    "type": "numerical",
+                    "placeholder": "0-100",
+                    "max": 100,
+                    "min": 0
+                }
+            ]
+        },
         "stackedBarChart": {
             "meta": {
                 "difficulty": 5
@@ -268,702 +319,9 @@
                 }
             ]
         },
-            "trainingBubbleChart1": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.66",
-                "parameters": {
-                    "selectedIndices": [
-                        1,
-                        4
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 66
-                    }
-                ]
-            },
-            "trainingBubbleChart2": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.80",
-                "parameters": {
-                    "selectedIndices": [
-                        2,
-                        3
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 80
-                    }
-                ]
-            },
-            "trainingBubbleChart3": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.75",
-                "parameters": {
-                    "selectedIndices": [
-                        0,
-                        3
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 75
-                    }
-                ]
-            },
-            "trainingBubbleChart4": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.80",
-                "parameters": {
-                    "selectedIndices": [
-                        1,
-                        2
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 80
-                    }
-                ]
-            },
-            "trainingBubbleChart5": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.60",
-                "parameters": {
-                    "selectedIndices": [
-                        0,
-                        2
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 60
-                    }
-                ]
-            },    
-            "trainingBubbleChart6": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.50",
-                "parameters": {
-                    "selectedIndices": [
-                        0,
-                        4
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 50
-                    }
-                ]
-            },
-            "trainingBubbleChart7": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.33",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        1,
-                        0
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 33
-                    }
-                ]
-            },
-            "trainingBubbleChart8": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.50",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        5,
-                        0
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 50
-                    }
-                ]
-            },
-            "trainingBubbleChart9": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.80",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        2,
-                        5
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 80
-                    }
-                ]
-            },
-            "trainingBubbleChart10": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.66",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        3,
-                        0
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 66
-                    }
-                ]
-            },
-            "trainingBubbleChart11": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.83",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        1,
-                        4
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 38
-                    }
-                ]
-            },
-            "trainingBubbleChart12": {
-                "baseComponent": "bubbleChart",
-                "description": "A bubble chart with correct answer of 0.50",
-                "parameters": {
-                    "data": [
-                        {
-                            "name": "A",
-                            "value": "20"
-                        },
-                        {
-                            "name": "B",
-                            "value": "60"
-                        },
-                        {
-                            "name": "C",
-                            "value": "50"
-                        },
-                        {
-                            "name": "D",
-                            "value": "30"
-                        },
-                        {
-                            "name": "E",
-                            "value": "50"
-                        },
-                        {
-                            "name": "F",
-                            "value": "40"
-                        }
-                    ],
-                    "selectedIndices": [
-                        1,
-                        3
-                    ]
-                },
-                "correctAnswer": [
-                    {
-                        "id": "cm-response",
-                        "answer": 50
-                    }
-                ]
-            },
-        "bubbleChart1": {
+        "trainingBubbleChart1": {
             "baseComponent": "bubbleChart",
-            "description": "test test",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    4
-                ]
-            }
-        },
-        "trainingTreeMap1": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    0,
-                    1
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 75
-                }
-            ]
-        }, 
-        "trainingTreeMap2": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    0,
-                    3
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
-        },
-        "trainingTreeMap3": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    1,
-                    3
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 33
-                }
-            ]
-        },
-        "trainingTreeMap4": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    2,
-                    5
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 87
-                }
-            ]
-        },
-        "trainingTreeMap5": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    3,
-                    5
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 28
-                }
-            ]
-        },
-        "trainingTreeMap6": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "selectedIndices": [
-                    2,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 62
-                }
-            ]
-        },
-        "trainingTreeMap7": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 30
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 20
-                    },
-                    {
-                        "name": "E",
-                        "value": 20
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    2,
-                    5
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
-        },
-        "trainingTreeMap8": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 30
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 20
-                    },
-                    {
-                        "name": "E",
-                        "value": 20
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    0,
-                    5
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 75
-                }
-            ]
-        },
-        "trainingTreeMap9": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 30
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 20
-                    },
-                    {
-                        "name": "E",
-                        "value": 20
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    1,
-                    3
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
-        },
-        "trainingTreeMap10": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 35
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 25
-                    },
-                    {
-                        "name": "E",
-                        "value": 10
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    2,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
-        },
-        "trainingTreeMap11": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 35
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 25
-                    },
-                    {
-                        "name": "E",
-                        "value": 10
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    3,
-                    4
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 40
-                }
-            ]
-        },
-        "trainingTreeMap12": {
-            "baseComponent": "treeMap",
-            "parameters": {
-                "data": [
-                    {
-                        "name": "A",
-                        "value": 30
-                    },
-                    {
-                        "name": "B",
-                        "value": 35
-                    },
-                    {
-                        "name": "C",
-                        "value": 20
-                    },
-                    {
-                        "name": "D",
-                        "value": 25
-                    },
-                    {
-                        "name": "E",
-                        "value": 10
-                    },
-                    {
-                        "name": "F",
-                        "value": 40
-                    }
-                ],
-                "selectedIndices": [
-                    1,
-                    3
-                ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 71
-                }
-            ]
-        },
-        "trainingPieChart1": {
-            "baseComponent": "pieChart",
+            "description": "A bubble chart with correct answer of 0.66",
             "parameters": {
                 "selectedIndices": [
                     1,
@@ -977,23 +335,25 @@
                 }
             ]
         },
-        "trainingPieChart2": {
-            "baseComponent": "pieChart",
+        "trainingBubbleChart2": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.80",
             "parameters": {
                 "selectedIndices": [
                     2,
-                    4
+                    3
                 ]
             },
             "correctAnswer": [
                 {
                     "id": "cm-response",
-                    "answer": 83
+                    "answer": 80
                 }
             ]
         },
-        "trainingPieChart3": {
-            "baseComponent": "pieChart",
+        "trainingBubbleChart3": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.75",
             "parameters": {
                 "selectedIndices": [
                     0,
@@ -1007,8 +367,25 @@
                 }
             ]
         },
-        "trainingPieChart4": {
-            "baseComponent": "pieChart",
+        "trainingBubbleChart4": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.80",
+            "parameters": {
+                "selectedIndices": [
+                    1,
+                    2
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 80
+                }
+            ]
+        },
+        "trainingBubbleChart5": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.60",
             "parameters": {
                 "selectedIndices": [
                     0,
@@ -1021,13 +398,140 @@
                     "answer": 60
                 }
             ]
-        },
-        "trainingPieChart5": {
-            "baseComponent": "pieChart",
+        },    
+        "trainingBubbleChart6": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.50",
             "parameters": {
                 "selectedIndices": [
-                    3,
-                    2
+                    0,
+                    4
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 50
+                }
+            ]
+        },
+        "trainingBubbleChart7": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.33",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    0
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 33
+                }
+            ]
+        },
+        "trainingBubbleChart8": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.50",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    5,
+                    0
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 50
+                }
+            ]
+        },
+        "trainingBubbleChart9": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.80",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    2,
+                    5
                 ]
             },
             "correctAnswer": [
@@ -1037,22 +541,461 @@
                 }
             ]
         },
-        "trainingPieChart6": {
+        "trainingBubbleChart10": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.66",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    3,
+                    0
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 66
+                }
+            ]
+        },
+        "trainingBubbleChart11": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.83",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    4
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 38
+                }
+            ]
+        },
+        "trainingBubbleChart12": {
+            "baseComponent": "bubbleChart",
+            "description": "A bubble chart with correct answer of 0.50",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "20"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "50"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    },
+                    {
+                        "name": "F",
+                        "value": "40"
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    3
+                ]
+            },
+            "correctAnswer": [
+                {
+                    "id": "cm-response",
+                    "answer": 50
+                }
+            ]
+        },
+        "bubbleChart1": {
+            "baseComponent": "bubbleChart",
+            "description": "test test",
+            "parameters": {
+                "selectedIndices": [
+                    1,
+                    4
+                ]
+            }
+        },
+        "TreeMap1": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    1
+                ]
+            }
+        }, 
+        "TreeMap2": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    3
+                ]
+            }
+        },
+        "TreeMap3": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    1,
+                    3
+                ]
+            }
+        },
+        "TreeMap4": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    5
+                ]
+            }
+        },
+        "TreeMap5": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    3,
+                    5
+                ]
+            }
+        },
+        "TreeMap6": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    4
+                ]
+            }
+        },
+        "TreeMap7": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 30
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 20
+                    },
+                    {
+                        "name": "E",
+                        "value": 20
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    2,
+                    5
+                ]
+            }
+        },
+        "TreeMap8": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 30
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 20
+                    },
+                    {
+                        "name": "E",
+                        "value": 20
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    0,
+                    5
+                ]
+            }
+        },
+        "TreeMap9": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 30
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 20
+                    },
+                    {
+                        "name": "E",
+                        "value": 20
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    3
+                ]
+            }
+        },
+        "TreeMap10": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 35
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 25
+                    },
+                    {
+                        "name": "E",
+                        "value": 10
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    2,
+                    4
+                ]
+            }
+        },
+        "TreeMap11": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 35
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 25
+                    },
+                    {
+                        "name": "E",
+                        "value": 10
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    3,
+                    4
+                ]
+            }
+        },
+        "TreeMap12": {
+            "baseComponent": "treeMap",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 30
+                    },
+                    {
+                        "name": "B",
+                        "value": 35
+                    },
+                    {
+                        "name": "C",
+                        "value": 20
+                    },
+                    {
+                        "name": "D",
+                        "value": 25
+                    },
+                    {
+                        "name": "E",
+                        "value": 10
+                    },
+                    {
+                        "name": "F",
+                        "value": 40
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    3
+                ]
+            }
+        },
+        "PieChart1": {
+            "baseComponent": "pieChart",
+            "parameters": {
+                "selectedIndices": [
+                    1,
+                    4
+                ]
+            }
+        },
+        "PieChart2": {
+            "baseComponent": "pieChart",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    4
+                ]
+            }
+        },
+        "PieChart3": {
+            "baseComponent": "pieChart",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    3
+                ]
+            }
+        },
+        "PieChart4": {
+            "baseComponent": "pieChart",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    2
+                ]
+            }
+        },
+        "PieChart5": {
+            "baseComponent": "pieChart",
+            "parameters": {
+                "selectedIndices": [
+                    3,
+                    2
+                ]
+            }
+        },
+        "PieChart6": {
             "baseComponent": "pieChart",
             "parameters": {
                 "selectedIndices": [
                     3,
                     1
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 100
-                }
-            ]
+            }
         },
-        "trainingPieChart7": {
+        "PieChart7": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1081,15 +1024,9 @@
                     3,
                     2
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 86
-                }
-            ]
+            }
         },
-        "trainingPieChart8": {
+        "PieChart8": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1118,15 +1055,9 @@
                     0,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 90
-                }
-            ]
+            }
         },
-        "trainingPieChart9": {
+        "PieChart9": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1155,15 +1086,9 @@
                     4,
                     2
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 70
-                }
-            ]
+            }
         },
-        "trainingPieChart10": {
+        "PieChart10": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1192,15 +1117,9 @@
                     0,
                     1
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 75
-                }
-            ]
+            }
         },
-        "trainingPieChart11": {
+        "PieChart11": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1229,15 +1148,9 @@
                     3,
                     1
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
+            }
         },
-        "trainingPieChart12": {
+        "PieChart12": {
             "baseComponent": "pieChart",
             "parameters": {
                 "data": [
@@ -1266,105 +1179,63 @@
                     1,
                     2
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 58
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart1": {
+        "StackedBarChart1": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     1,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 60
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart2": {
+        "StackedBarChart2": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     1,
                     5
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart3": {
+        "StackedBarChart3": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     0,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 40
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart4": {
+        "StackedBarChart4": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     2,
                     5
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 75
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart5": {
+        "StackedBarChart5": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     3,
                     0
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 50
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart6": {
+        "StackedBarChart6": {
             "baseComponent": "stackedBarChart",
             "parameters": {
                 "selectedIndices": [
                     2,
                     3
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart7": {
+        "StackedBarChart7": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1397,15 +1268,9 @@
                     0,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 75
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart8": {
+        "StackedBarChart8": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1438,15 +1303,9 @@
                     2,
                     3
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 33
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart9": {
+        "StackedBarChart9": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1479,15 +1338,9 @@
                     5,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 66
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart10": {
+        "StackedBarChart10": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1520,15 +1373,9 @@
                     1,
                     5
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 78
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart11": {
+        "StackedBarChart11": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1561,15 +1408,9 @@
                     0,
                     3
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 53
-                }
-            ]
+            }
         },
-        "trainingStackedBarChart12": {
+        "StackedBarChart12": {
             "baseComponent": "stackedBarChart",
             "parameters": { 
                 "data": [
@@ -1602,13 +1443,247 @@
                     2,
                     4
                 ]
-            },
-            "correctAnswer": [
-                {
-                    "id": "cm-response",
-                    "answer": 83
-                }
-            ]
+            }
+        },
+        "DonutChart1": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    1,
+                    4
+                ]
+            }
+        },
+        "DonutChart2": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    2,
+                    4
+                ]
+            }
+        },
+        "DonutChart3": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    3
+                ]
+            }
+        },
+        "DonutChart4": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    0,
+                    2
+                ]
+            }
+        },
+        "DonutChart5": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    3,
+                    2
+                ]
+            }
+        },
+        "DonutChart6": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "selectedIndices": [
+                    3,
+                    1
+                ]
+            }
+        },
+        "DonutChart7": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    3,
+                    2
+                ]
+            }
+        },
+        "DonutChart8": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    0,
+                    4
+                ]
+            }
+        },
+        "DonutChart9": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    4,
+                    2
+                ]
+            }
+        },
+        "DonutChart10": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    0,
+                    1
+                ]
+            }
+        },
+        "DonutChart11": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    3,
+                    1
+                ]
+            }
+        },
+        "DonutChart12": {
+            "baseComponent": "donutChart",
+            "parameters": {
+                "data": [
+                    {
+                        "name": "A",
+                        "value": "45"
+                    },
+                    {
+                        "name": "B",
+                        "value": "60"
+                    },
+                    {
+                        "name": "C",
+                        "value": "35"
+                    },
+                    {
+                        "name": "D",
+                        "value": "30"
+                    },
+                    {
+                        "name": "E",
+                        "value": "50"
+                    }
+                ],
+                "selectedIndices": [
+                    1,
+                    2
+                ]
+            }
         },
         "post-study-survey": {
             "type": "questionnaire",
@@ -1672,50 +1747,58 @@
             "introduction",
             {
                 "order": "random",
-                "numSamples": 12,
+                "numSamples": 20,
                 "components": [
-                    "trainingBubbleChart1",
-                    "trainingStackedBarChart1",
-                    "trainingStackedBarChart2",
-                    "trainingStackedBarChart3",
-                    "trainingStackedBarChart4",
-                    "trainingStackedBarChart5",
-                    "trainingStackedBarChart6",
-                    "trainingStackedBarChart7",
-                    "trainingStackedBarChart8",
-                    "trainingStackedBarChart9",
-                    "trainingStackedBarChart10",
-                    "trainingStackedBarChart11",
-                    "trainingStackedBarChart12",
-                    "trainingTreeMap1",
-                    "trainingTreeMap2",
-                    "trainingTreeMap3",
-                    "trainingTreeMap4",
-                    "trainingTreeMap5",
-                    "trainingTreeMap6",
-                    "trainingTreeMap7",
-                    "trainingTreeMap8",
-                    "trainingTreeMap9",
-                    "trainingTreeMap10",
-                    "trainingTreeMap11",
-                    "trainingTreeMap12",
-                    "trainingPieChart1",
-                    "trainingPieChart2",
-                    "trainingPieChart3",
-                    "trainingPieChart4",
-                    "trainingPieChart5",
-                    "trainingPieChart6",
-                    "trainingPieChart7",
-                    "trainingPieChart8",
-                    "trainingPieChart9",
-                    "trainingPieChart10",
-                    "trainingPieChart11",
-                    "trainingPieChart12"
-                            
+                    "StackedBarChart1",
+                    "StackedBarChart2",
+                    "StackedBarChart3",
+                    "StackedBarChart4",
+                    "StackedBarChart5",
+                    "StackedBarChart6",
+                    "StackedBarChart7",
+                    "StackedBarChart8",
+                    "StackedBarChart9",
+                    "StackedBarChart10",
+                    "StackedBarChart11",
+                    "StackedBarChart12",
+                    "TreeMap1",
+                    "TreeMap2",
+                    "TreeMap3",
+                    "TreeMap4",
+                    "TreeMap5",
+                    "TreeMap6",
+                    "TreeMap7",
+                    "TreeMap8",
+                    "TreeMap9",
+                    "TreeMap10",
+                    "TreeMap11",
+                    "TreeMap12",
+                    "PieChart1",
+                    "PieChart2",
+                    "PieChart3",
+                    "PieChart4",
+                    "PieChart5",
+                    "PieChart6",
+                    "PieChart7",
+                    "PieChart8",
+                    "PieChart9",
+                    "PieChart10",
+                    "PieChart11",
+                    "PieChart12",
+                    "DonutChart1",
+                    "DonutChart2",
+                    "DonutChart3",
+                    "DonutChart4",
+                    "DonutChart5",
+                    "DonutChart6",
+                    "DonutChart7",
+                    "DonutChart8",
+                    "DonutChart9",
+                    "DonutChart10",
+                    "DonutChart11",
+                    "DonutChart12"
                 ]
-            },
-            "consent",
-            "post-study-survey"
+            }
         ]
     }
 }
